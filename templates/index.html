@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <header class="page-header">
+        <h1>Блог студента</h1>
+        <p>Добро пожаловать! Я увлечена веб-разработкой и активно изучаю Python и Flask.</p>
+    </header>
+
+    <section class="profile">
+        <img src="{{ url_for('static', filename='avatar.png') }}" alt="Мое фото">
+        <h2>Обо мне</h2>
+        <p>Здесь я собираю свои успехи и анализирую прогресс.</p>
+    </section>
+
+    <section class="progress">
+        <h2>Успеваемость по дисциплинам</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Python</th>
+                    <th>HTML & CSS</th>
+                    <th>JavaScript</th> <!-- Добавлена 3-я тема -->
+                    <th>SQL</th>
+                    <th>Git</th>
+                    <th>Flask</th>
+                    <th>Docker</th>
+                    <th>Linux</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 1 строка: % выполнения темы -->
+                <tr>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td> <!-- Заполняем 3-ю тему -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <!-- 2 строка: % выполнения ДЗ -->
+                <tr>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td> <!-- Заполняем 3-ю тему -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <!-- 3 строка: Комментарии -->
+                <tr>
+                    <td>Отлично</td>
+                    <td>Отлично</td>
+                    <td>В процессе</td> <!-- Заполняем 3-ю тему -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+{% endblock %}

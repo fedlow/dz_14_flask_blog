@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой блог: Достижения и навыки</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Кнопки перехода на другую страницу и обратно -->
+    <nav class="navbar">
+        <a href="{{ url_for('index') }}">Главная</a>
+        <a href="{{ url_for('notes') }}">Дневник программиста</a>
+    </nav>
+
+    <!-- Блок, куда вставляется контент дочерних страниц -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Мой блог. Все права защищены.</p>
+    </footer>
+</body>
+</html>
