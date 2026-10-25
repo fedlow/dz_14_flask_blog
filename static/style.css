@@ -132,3 +132,15 @@ button[type="submit"]:hover {
 .empty-msg { color: #888; font-style: italic; }
 
 footer { text-align: center; margin-top: 40px; color: #888; }
+
+.notes-list h4.subtitle {
+    color: #a0a0b0;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 5px 0 10px 0;
+    font-style: italic;
+}
+
+input#subtitle {
+    /* Стили наследуются от input[type="text"] */
+}

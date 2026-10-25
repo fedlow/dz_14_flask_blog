@@ -11,6 +11,9 @@
                 <label for="title">Заголовок записи:</label>
                 <input type="text" id="title" name="title" placeholder="Например: Изучил циклы" required>
                 
+                <label for="subtitle">Подзаголовок (необязательно):</label>
+                <input type="text" id="subtitle" name="subtitle" placeholder="Краткое описание">
+                
                 <label for="content">Текст записи:</label>
                 <textarea id="content" name="content" rows="4" placeholder="Что нового узнал..." required></textarea>
                 
@@ -18,15 +21,18 @@
             </form>
         </div>
 
-        <!-- Вывод записей из словаря -->
+        <!-- Вывод записей из БД -->
         <div class="notes-list">
             <h2>Мои записи</h2>
             {% if notes %}
                 <ul>
-                    {% for title, content in notes.items() %}
+                    {% for note in notes %}
                         <li>
-                            <h3>{{ title }}</h3>
-                            <p>{{ content }}</p>
+                            <h3>{{ note.title }}</h3>
+                            {% if note.subtitle %}
+                                <h4 class="subtitle">{{ note.subtitle }}</h4>
+                            {% endif %}
+                            <p>{{ note.text }}</p>
                         </li>
                     {% endfor %}
                 </ul>
